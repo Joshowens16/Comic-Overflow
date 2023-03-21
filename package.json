@@ -7,9 +7,9 @@
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
     "test": "JWT=shhhhh mocha",
-    "test:dev": "DATABASE_URL=postgresql://rosalie0:v2_3yhR7_GJiuWQsWDZSpFPM6jQzm9jf@db.bit.io:5432/rosalie0/comic-overflow?ssl=true npm run test -- --watch",
+    "test:dev": "npm run test -- --watch",
     "test:dev:quiet": "QUIET=true npm run test:dev",
-    "seed": "DATABASE_URL=postgresql://rosalie0:v2_3yhR7_GJiuWQsWDZSpFPM6jQzm9jf@db.bit.io:5432/rosalie0/comic-overflow?ssl=true node server/db/seed.js",
+    "seed": "node server/db/seed.js",
     "seed:dev": "node server/db/seed.js",
     "start": "node server/index.js",
     "start:dev": "JWT=felix nodemon server/index.js --ignore dist/ --ignore src/ & npm run build:dev"
